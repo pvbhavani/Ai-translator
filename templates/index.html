@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lex AI Translator</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<h1>Lex AI Translator</h1>
+
+<div class="container">
+
+    <div class="card">
+
+        <div class="top">
+            <select id="source">
+                <option value="auto">Detect Language</option>
+                <option value="en">English</option>
+                <option value="hi">Hindi</option>
+                <option value="te">Telugu</option>
+                <option value="es">Spanish</option>
+                <option value="fr">French</option>
+            </select>
+        </div>
+
+        <textarea id="inputText"
+        placeholder="Type or paste text here..."></textarea>
+
+    </div>
+
+    <div class="card">
+
+        <div class="top">
+            <select id="target">
+                <option value="en">English</option>
+                <option value="hi">Hindi</option>
+                <option value="te">Telugu</option>
+                <option value="es">Spanish</option>
+                <option value="fr">French</option>
+            </select>
+        </div>
+
+        <textarea id="outputText"
+        placeholder="Translation will appear here..."
+        readonly></textarea>
+
+    </div>
+
+</div>
+
+<button onclick="translateText()">
+    Translate
+</button>
+
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+</html>
