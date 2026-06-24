@@ -14,7 +14,11 @@ def translate():
     text = data['text']
     source = data['source']
     target = data['target']
-
+    
+    print("Text:", text)
+    print("Source:", source)
+    print("Target:", target)
+    
     translated = GoogleTranslator(
         source=source,
         target=target
